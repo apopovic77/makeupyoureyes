@@ -17,9 +17,13 @@ export function Catalogue() {
                 ★ Leistungen · Index
               </span>
             </p>
-            <h2 className="font-display font-light text-ink text-5xl md:text-7xl lg:text-[112px] leading-[0.94] tracking-[-0.02em]">
-              Ein Studio.
-              <span className="block italic text-gold-shimmer">Vierzehn Handwerke.</span>
+            <h2 className="text-ink">
+              <span className="block font-serif font-light italic text-5xl md:text-7xl lg:text-[112px] leading-[0.94] tracking-[-0.02em]">
+                Ein Studio.
+              </span>
+              <span className="block font-display font-normal text-gold-shimmer text-6xl md:text-8xl lg:text-[132px] leading-[1.25] tracking-normal pb-4">
+                Vierzehn Handwerke.
+              </span>
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-3 lg:col-start-10">
@@ -40,7 +44,7 @@ export function Catalogue() {
                     <p className="text-[10px] uppercase tracking-[0.4em] text-champagne-deep font-bold mb-2">
                       ✦ {cat.kicker}
                     </p>
-                    <h3 className="font-display italic font-light text-ink text-3xl md:text-4xl">
+                    <h3 className="font-serif italic font-light text-3xl md:text-4xl">
                       <span className="text-gold-shimmer">{cat.heading}</span>
                     </h3>
                   </div>
@@ -60,7 +64,7 @@ export function Catalogue() {
                         <span className="font-mono text-[10px] text-champagne-deep tracking-[0.2em] font-bold">
                           {item.no}
                         </span>
-                        <span className="font-display italic font-normal text-xl md:text-2xl text-ink flex-1 group-hover:text-champagne-deep transition-colors">
+                        <span className="font-serif italic font-normal text-xl md:text-2xl text-ink flex-1 group-hover:text-champagne-deep transition-colors">
                           {item.name}
                         </span>
                         <span className="text-[11px] uppercase tracking-[0.32em] text-champagne-deep opacity-0 group-hover:opacity-100 transition-opacity font-bold">

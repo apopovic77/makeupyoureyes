@@ -49,9 +49,13 @@ export function Contact() {
                 ★ {contact.eyebrow}
               </span>
             </p>
-            <h2 className="font-display font-light text-ink text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
+            <h2 className="text-ink whitespace-pre-line">
               {contact.headline.split('\n').map((line, i) => (
-                <span key={i} className={i === 1 ? 'block italic text-gold-shimmer' : 'block'}>{line}</span>
+                i === 0 ? (
+                  <span key={i} className="block font-serif font-light italic text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em]">{line}</span>
+                ) : (
+                  <span key={i} className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">{line}</span>
+                )
               ))}
             </h2>
             <p className="mt-10 md:mt-12 max-w-md text-ink-soft text-base md:text-lg leading-[1.85] font-light">
@@ -66,7 +70,7 @@ export function Contact() {
                 </p>
                 <a
                   href={`tel:${brand.phone.replace(/\s/g, "")}`}
-                  className="font-display italic text-xl md:text-2xl text-ink hover:text-champagne transition-colors"
+                  className="font-serif italic text-xl md:text-2xl text-ink hover:text-champagne transition-colors"
                 >
                   {brand.phoneDisplay}
                 </a>
@@ -77,7 +81,7 @@ export function Contact() {
                 </p>
                 <a
                   href={`mailto:${brand.email}`}
-                  className="font-display italic text-xl md:text-2xl text-ink hover:text-champagne transition-colors break-all"
+                  className="font-serif italic text-xl md:text-2xl text-ink hover:text-champagne transition-colors break-all"
                 >
                   {brand.email}
                 </a>
@@ -86,7 +90,7 @@ export function Contact() {
                 <p className="text-[10px] uppercase tracking-[0.32em] text-stone font-medium mb-2">
                   Adresse
                 </p>
-                <address className="not-italic font-display text-lg md:text-xl text-ink leading-tight">
+                <address className="not-italic font-serif text-lg md:text-xl text-ink leading-tight">
                   {brand.address}<br />
                   {brand.zip} {brand.city}<br />
                   <span className="text-stone text-sm">{brand.country}</span>
@@ -96,7 +100,7 @@ export function Contact() {
                 <p className="text-[10px] uppercase tracking-[0.32em] text-stone font-medium mb-2">
                   Öffnungszeiten
                 </p>
-                <div className="font-display italic text-lg md:text-xl text-ink leading-tight">
+                <div className="font-serif italic text-lg md:text-xl text-ink leading-tight">
                   {brand.hoursWeek}<br />
                   <span className="text-stone text-sm not-italic">{brand.hoursSat}</span>
                 </div>

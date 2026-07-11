@@ -28,10 +28,14 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
-            className="font-display font-normal text-ink text-[64px] sm:text-[92px] md:text-[128px] lg:text-[168px] leading-[0.88] tracking-[-0.03em]"
+            className="text-ink"
           >
-            <span className="block italic font-light">{hero.title}</span>
-            <span className="block text-gold-shimmer text-glow-gold">{hero.titleAccent}</span>
+            <span className="block font-display font-normal text-ink text-[68px] sm:text-[96px] md:text-[132px] lg:text-[168px] leading-[1.35] tracking-normal pb-4">
+              {hero.title}
+            </span>
+            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[68px] sm:text-[96px] md:text-[132px] lg:text-[168px] leading-[1.35] tracking-normal pb-4">
+              {hero.titleAccent}
+            </span>
           </motion.h1>
 
           <motion.p
@@ -88,7 +92,7 @@ export function Hero() {
             {/* Signature detail — floating gold label */}
             <div className="absolute -bottom-6 -right-6 bg-ink text-champagne-soft px-5 py-3 border border-champagne glow-gold">
               <div className="text-[9px] uppercase tracking-[0.4em] font-light">Editorial</div>
-              <div className="font-display italic text-lg text-champagne-soft">MMXXVI</div>
+              <div className="font-serif italic text-lg text-champagne-soft">MMXXVI</div>
             </div>
             {/* Sparkles */}
             <span className="absolute -top-4 -left-4 text-2xl text-champagne animate-sparkle">✦</span>

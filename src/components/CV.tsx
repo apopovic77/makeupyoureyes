@@ -16,9 +16,13 @@ export function CV() {
                 ★ Werdegang · Curriculum
               </span>
             </p>
-            <h2 className="font-display font-light text-bone text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em]">
-              Beinahe drei
-              <span className="block italic text-gold-shimmer text-glow-gold">Dekaden Lernen.</span>
+            <h2 className="text-bone">
+              <span className="block font-serif font-light italic text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em]">
+                Beinahe drei
+              </span>
+              <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">
+                Dekaden Lernen.
+              </span>
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
@@ -39,7 +43,7 @@ export function CV() {
                   <div className={`col-span-4 md:col-span-2 font-mono text-[10px] md:text-xs uppercase tracking-[0.24em] pt-1 font-bold ${isHighlight ? 'text-gold-shimmer' : 'text-champagne'}`}>
                     {c.year}
                   </div>
-                  <div className={`col-span-8 md:col-span-10 font-display italic font-light text-lg md:text-2xl leading-tight ${isHighlight ? 'text-gold-shimmer' : 'text-bone group-hover:text-champagne-soft'} transition-colors`}>
+                  <div className={`col-span-8 md:col-span-10 font-serif italic font-light text-lg md:text-2xl leading-tight ${isHighlight ? 'text-gold-shimmer' : 'text-bone group-hover:text-champagne-soft'} transition-colors`}>
                     {c.label}
                   </div>
                 </div>

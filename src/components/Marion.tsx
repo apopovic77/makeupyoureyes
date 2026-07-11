@@ -54,7 +54,7 @@ export function Marion() {
               </p>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="font-script font-normal text-ink text-6xl md:text-8xl lg:text-9xl leading-[0.94] tracking-normal">
+              <h2 className="font-script font-normal text-ink text-6xl md:text-8xl lg:text-9xl leading-[1.15] tracking-normal pb-4">
                 <span className="text-gold-shimmer text-glow-gold">
                   Marion Oberlerchner
                 </span>

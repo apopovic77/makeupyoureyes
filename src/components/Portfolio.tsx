@@ -36,11 +36,13 @@ export function Portfolio() {
                 ★ {portfolio.eyebrow}
               </span>
             </p>
-            <h2 className="font-display font-light text-bone text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
+            <h2 className="text-bone whitespace-pre-line">
               {portfolio.headline.split("\n").map((line, li) => (
-                <span key={li} className={li === 1 ? "block italic text-gold-shimmer text-glow-gold" : "block"}>
-                  {line}
-                </span>
+                li === 0 ? (
+                  <span key={li} className="block font-serif font-light italic text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em]">{line}</span>
+                ) : (
+                  <span key={li} className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">{line}</span>
+                )
               ))}
             </h2>
           </Reveal>
@@ -100,7 +102,7 @@ export function Portfolio() {
                 <div className="inline-flex items-center gap-3 bg-gold-gradient text-ink px-3 py-1 mb-5 text-[10px] uppercase tracking-[0.32em] font-bold glow-gold">
                   ★ {work.tag}
                 </div>
-                <h3 className="font-display font-light text-bone text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-[-0.02em]">
+                <h3 className="font-serif font-light italic text-bone text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-[-0.02em]">
                   <span className="italic text-gold-shimmer text-glow-gold">{work.title}</span>
                 </h3>
                 <p className="mt-4 md:mt-6 text-bone/85 text-sm md:text-base leading-[1.7] font-light max-w-md">

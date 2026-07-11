@@ -19,9 +19,17 @@ export function NFL() {
                 ★ {nfl.eyebrow}
               </span>
             </p>
-            <h2 className="font-display font-light text-bone text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
+            <h2 className="text-bone whitespace-pre-line">
               {nfl.headline.split('\n').map((line, i) => (
-                <span key={i} className={i === 1 ? 'block text-gold-shimmer text-glow-gold' : 'block'}>{line}</span>
+                i === 0 ? (
+                  <span key={i} className="block font-serif font-light text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] italic">
+                    {line}
+                  </span>
+                ) : (
+                  <span key={i} className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">
+                    {line}
+                  </span>
+                )
               ))}
             </h2>
           </Reveal>
@@ -48,7 +56,7 @@ export function NFL() {
                     {p.kicker}
                   </span>
                 </div>
-                <h3 className="font-display font-light text-bone text-3xl md:text-4xl leading-tight mb-6 group-hover:text-champagne-soft transition-colors">
+                <h3 className="font-serif font-light italic text-bone text-3xl md:text-4xl leading-tight mb-6 group-hover:text-champagne-soft transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-bone/70 text-sm md:text-base leading-[1.75] font-light">

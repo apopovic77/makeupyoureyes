@@ -23,7 +23,7 @@ export function Testimonials() {
                 <span className="font-display italic font-light text-gold-shimmer text-8xl leading-none mb-4">
                   „
                 </span>
-                <blockquote className="font-display italic font-light text-ink text-xl md:text-2xl leading-[1.35] flex-1">
+                <blockquote className="font-serif italic font-light text-ink text-xl md:text-2xl leading-[1.35] flex-1">
                   {t.quote}
                 </blockquote>
                 <figcaption className="mt-8 border-t border-champagne/40 pt-4">

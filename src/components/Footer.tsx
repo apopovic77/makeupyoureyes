@@ -7,10 +7,10 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 pt-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 md:mb-24">
           <div className="md:col-span-5">
-            <p className="font-display text-3xl md:text-4xl leading-[1.15] tracking-[0.28em]">
+            <p className="font-serif text-3xl md:text-4xl leading-[1.15] tracking-[0.28em]">
               MAKEUPYOUREYES
             </p>
-            <p className="mt-4 font-display italic text-lg text-bone/70 leading-tight">
+            <p className="mt-4 font-serif italic text-lg text-bone/70 leading-tight">
               Marion Oberlerchner<br />
               <span className="text-champagne text-xs uppercase tracking-[0.28em] not-italic">
                 Kosmetikmeisterin & Beautyexpertin

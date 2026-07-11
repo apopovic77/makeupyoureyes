@@ -33,14 +33,14 @@ export function LegalPage({ kind }: Props) {
 
 function H1({ children }: { children: React.ReactNode }) {
   return (
-    <h1 className="font-display font-light text-ink text-4xl md:text-6xl leading-[0.95] tracking-[-0.02em]">
+    <h1 className="font-serif font-light italic text-ink text-4xl md:text-6xl leading-[0.95] tracking-[-0.02em]">
       {children}
     </h1>
   );
 }
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="font-display italic text-ink text-2xl md:text-3xl mt-12 mb-3 leading-tight">
+    <h2 className="font-serif italic text-ink text-2xl md:text-3xl mt-12 mb-3 leading-tight">
       {children}
     </h2>
   );

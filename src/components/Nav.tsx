@@ -30,7 +30,7 @@ export function Nav() {
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 flex items-center justify-between">
         <Link
           to="/"
-          className="font-display font-medium text-ink text-xl md:text-2xl tracking-[0.28em] hover:text-champagne transition-colors"
+          className="font-serif font-medium text-ink text-xl md:text-2xl tracking-[0.28em] hover:text-champagne transition-colors"
         >
           {brand.name}
         </Link>
