@@ -66,8 +66,8 @@ export function NFL() {
         <Reveal delay={0.2}>
           <blockquote className="mt-20 md:mt-32 max-w-4xl mx-auto text-center relative">
             <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-3xl text-gold-shimmer">✦ ✦ ✦</span>
-            <p className="font-display italic font-light text-bone text-3xl md:text-5xl lg:text-6xl leading-[1.15] tracking-[-0.01em]">
-              „{nfl.quote}"
+            <p className="font-script font-normal text-champagne-soft text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-glow-gold">
+              {nfl.quote}
             </p>
             <footer className="mt-10 text-[10px] uppercase tracking-[0.4em] text-champagne-soft">
               — Marion Oberlerchner

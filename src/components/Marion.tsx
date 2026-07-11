@@ -54,14 +54,16 @@ export function Marion() {
               </p>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="font-display font-light text-ink text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
-                <span className="text-gold-shimmer">{marion.headline}</span>
+              <h2 className="font-script font-normal text-ink text-6xl md:text-8xl lg:text-9xl leading-[0.94] tracking-normal">
+                <span className="text-gold-shimmer text-glow-gold">
+                  Marion Oberlerchner
+                </span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.15}>
-              <p className="mt-12 md:mt-16 font-display italic text-ink text-2xl md:text-3xl leading-[1.35] max-w-2xl">
-                <span className="text-champagne-deep font-normal not-italic">„</span>{marion.quote}<span className="text-champagne-deep font-normal not-italic">"</span>
+              <p className="mt-12 md:mt-16 font-script font-normal text-champagne-deep text-4xl md:text-5xl leading-[1.15] max-w-2xl">
+                {marion.quote}
               </p>
             </Reveal>
 
