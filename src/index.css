@@ -21,9 +21,10 @@
   --color-stone: #7a7368;
   --color-stone-soft: #a89f92;
 
-  /* Fonts */
-  --font-display: "Bodoni Moda", "Playfair Display", ui-serif, Georgia, serif;
-  --font-script: "Great Vibes", "Pinyon Script", cursive;  /* Colatin-alternative — Marion's CI signature */
+  /* Fonts — Great Vibes as Colatin-alternative, primary display font (Marion's CI) */
+  --font-display: "Great Vibes", "Pinyon Script", cursive;
+  --font-script: "Great Vibes", "Pinyon Script", cursive;
+  --font-serif: "Bodoni Moda", "Playfair Display", ui-serif, Georgia, serif;  /* Kept as fallback / accent option */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
