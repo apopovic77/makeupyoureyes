@@ -144,6 +144,86 @@ export const cv = [
   { year: "2026", label: "Natural Face Lifting Methoden bei Olga von Stein" },
 ];
 
+// Portfolio — full-bleed editorial slider
+export const portfolio = {
+  eyebrow: "Portfolio · Editorial Work",
+  headline: "Meine Arbeit\nspricht.",
+  works: [
+    {
+      src: "/media/images/140613_martinlugger_lisa_MLUG1836p-1920w.jpg",
+      tag: "Editorial · Martin Lugger",
+      title: "Golden Hour",
+      caption: "Sunset-Portrait am Feld. Warm-goldenes Licht, Beauty-Pageant-Look.",
+    },
+    {
+      src: "/media/images/140613_martinlugger_lisa_MLUG1908-1920w.jpg",
+      tag: "Editorial · Martin Lugger",
+      title: "Grasses",
+      caption: "Nature-Editorial. Weiche Konturen, ätherisch, storytelling.",
+    },
+    {
+      src: "/media/images/_MG_2076-Edit01bw-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Karo · B&W",
+      caption: "Studio-Portrait, kontrastreich, monochrom.",
+    },
+    {
+      src: "/media/images/_MG_2148-Edit02-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Trachten-Portrait",
+      caption: "Authentische Volkstracht, editorial in Studio-Licht gesetzt.",
+    },
+    {
+      src: "/media/images/_MG_2283-Edit01F-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Floral Dress",
+      caption: "Sommerliches Kleid, Marmor-Setting, subtiles Make-up.",
+    },
+    {
+      src: "/media/images/_MG_2209-Edit-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Blue · Splash",
+      caption: "Farbige Splash-Beauty. Blau-Editorial mit dramatic Make-up.",
+    },
+    {
+      src: "/media/images/_MG_7805-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Red Dress",
+      caption: "Portrait in Signal-Rot. Kontur-Definition durch Contouring.",
+    },
+    {
+      src: "/media/images/_MG_7537_2-1920w.jpg",
+      tag: "Editorial · Studio",
+      title: "Cover Portrait",
+      caption: "B&W-Beauty. Volle Wimpernpracht, subtile Lippenkontur.",
+    },
+    {
+      src: "/media/images/AL_02-1920w.jpg",
+      tag: "Editorial · Alois Bergmann",
+      title: "Elegance",
+      caption: "Statement-Kleid, Studio-Setting, ausdrucksstarker Blick.",
+    },
+    {
+      src: "/media/images/julia11-1920w.jpg",
+      tag: "Editorial",
+      title: "Julia · Sunset",
+      caption: "Sunset-Portrait mit warmem Rimlight.",
+    },
+    {
+      src: "/media/images/oczy-1920w.jpg",
+      tag: "Permanent Make-up",
+      title: "Wimpernkranz-Detail",
+      caption: "Präzision. Feinste Handarbeit direkt am Wimpernrand.",
+    },
+    {
+      src: "/media/images/Lisa-1920w.jpg",
+      tag: "Kunden",
+      title: "Lisa · Behandlung",
+      caption: "Bestandskundin. Editorial-Look für privaten Anlass.",
+    },
+  ],
+};
+
 export const contact = {
   eyebrow: "Kontakt",
   headline: "Ein Termin.\nEin Wandel.",

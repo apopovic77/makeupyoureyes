@@ -1,6 +1,7 @@
 import { Hero } from "../components/Hero";
 import { NFL } from "../components/NFL";
 import { Marion } from "../components/Marion";
+import { Portfolio } from "../components/Portfolio";
 import { Catalogue } from "../components/Catalogue";
 import { Testimonials } from "../components/Testimonials";
 import { CV } from "../components/CV";
@@ -12,6 +13,7 @@ export function Home() {
       <Hero />
       <NFL />
       <Marion />
+      <Portfolio />
       <Catalogue />
       <Testimonials />
       <CV />
