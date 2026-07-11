@@ -4,16 +4,24 @@ import { hero, marion } from "../data/content";
 export function Hero() {
   return (
     <section className="relative min-h-screen bg-bone text-ink pt-32 md:pt-40 pb-24 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+      {/* Radial gold glow behind hero — subtle luminescence */}
+      <div className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-40"
+        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, rgba(212,168,83,0.2) 40%, transparent 70%)' }} />
+      <div className="pointer-events-none absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full opacity-30"
+        style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.5) 0%, rgba(199,117,139,0.2) 40%, transparent 70%)' }} />
+
+      <div className="relative mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
         {/* LEFT — massive editorial type */}
         <div className="lg:col-span-7 order-2 lg:order-1">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1 }}
-            className="text-[11px] uppercase tracking-[0.4em] text-champagne font-medium mb-8 md:mb-14"
+            className="inline-flex items-center gap-3 bg-gold-gradient-soft border border-champagne/40 px-4 py-1.5 mb-8 md:mb-14 glow-gold"
           >
-            {hero.eyebrow}
+            <span className="text-[11px] uppercase tracking-[0.4em] text-ink font-medium">
+              ★ {hero.eyebrow}
+            </span>
           </motion.p>
 
           <motion.h1
@@ -23,7 +31,7 @@ export function Hero() {
             className="font-display font-normal text-ink text-[64px] sm:text-[92px] md:text-[128px] lg:text-[168px] leading-[0.88] tracking-[-0.03em]"
           >
             <span className="block italic font-light">{hero.title}</span>
-            <span className="block text-champagne">{hero.titleAccent}</span>
+            <span className="block text-gold-shimmer text-glow-gold">{hero.titleAccent}</span>
           </motion.h1>
 
           <motion.p
@@ -43,14 +51,14 @@ export function Hero() {
           >
             <a
               href="#natural-face-lifting"
-              className="group inline-flex items-center gap-4 bg-ink text-bone px-8 py-4 text-[11px] uppercase tracking-[0.32em] font-medium hover:bg-champagne transition-colors"
+              className="group inline-flex items-center gap-4 bg-gold-gradient text-ink px-8 py-4 text-[11px] uppercase tracking-[0.32em] font-bold glow-gold hover:scale-[1.02] hover:shadow-[0_0_48px_rgba(240,216,150,0.6)] transition-all"
             >
               {hero.cta1}
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#kontakt"
-              className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-ink underline underline-offset-8 decoration-champagne decoration-2 hover:decoration-ink transition-colors py-4"
+              className="group inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-ink underline underline-offset-8 decoration-champagne decoration-2 hover:decoration-champagne-deep transition-colors py-4 font-medium"
             >
               {hero.cta2}
             </a>
@@ -65,16 +73,26 @@ export function Hero() {
           className="lg:col-span-5 order-1 lg:order-2 relative"
         >
           <div className="relative aspect-[3/4] max-w-[420px] mx-auto lg:ml-auto lg:mr-0">
-            <img
-              src={marion.editorial}
-              alt="Editorial portrait"
-              className="w-full h-full object-cover editorial-bw"
-            />
-            {/* Champagne strip at bottom-right — signature detail */}
-            <div className="absolute -bottom-4 -right-4 h-24 w-24 border-2 border-champagne pointer-events-none" />
-            <div className="absolute top-6 left-6 text-[10px] uppercase tracking-[0.32em] text-bone mix-blend-difference font-light">
-              MAKEUPYOUREYES<br />Editorial · 2026
+            {/* Gold gradient frame */}
+            <div className="absolute -inset-2 bg-gold-gradient glow-gold" />
+            <div className="relative w-full h-full overflow-hidden">
+              <img
+                src={marion.editorial}
+                alt="Editorial portrait"
+                className="w-full h-full object-cover editorial-bw"
+              />
+              {/* Warm rose-gold overlay tint */}
+              <div className="absolute inset-0 pointer-events-none"
+                style={{ background: 'linear-gradient(135deg, rgba(228,165,165,0.15) 0%, transparent 40%, rgba(212,168,83,0.2) 100%)' }} />
             </div>
+            {/* Signature detail — floating gold label */}
+            <div className="absolute -bottom-6 -right-6 bg-ink text-champagne-soft px-5 py-3 border border-champagne glow-gold">
+              <div className="text-[9px] uppercase tracking-[0.4em] font-light">Editorial</div>
+              <div className="font-display italic text-lg text-champagne-soft">MMXXVI</div>
+            </div>
+            {/* Sparkles */}
+            <span className="absolute -top-4 -left-4 text-2xl text-champagne animate-sparkle">✦</span>
+            <span className="absolute top-1/3 -right-6 text-lg text-champagne-soft animate-sparkle" style={{ animationDelay: '1.5s' }}>✦</span>
           </div>
         </motion.div>
       </div>

@@ -4,23 +4,37 @@ import { marion } from "../data/content";
 export function Marion() {
   return (
     <section id="marion" className="relative bg-bone-deep text-ink py-24 md:py-40 overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10">
+      {/* Ambient rose+gold */}
+      <div className="pointer-events-none absolute top-40 -left-32 w-[500px] h-[500px] rounded-full opacity-30"
+        style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.6) 0%, transparent 70%)' }} />
+      <div className="pointer-events-none absolute bottom-20 -right-40 w-[600px] h-[600px] rounded-full opacity-30"
+        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, transparent 70%)' }} />
+
+      <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
-          {/* Portrait — B&W treatment hides harsh eye makeup */}
+          {/* Portrait with gold frame + duotone rose-gold treatment */}
           <Reveal className="lg:col-span-5">
             <div className="relative">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div className="absolute -inset-2 bg-gold-gradient glow-gold" />
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <img
                   src={marion.portrait}
                   alt={marion.headline}
                   className="w-full h-full object-cover editorial-bw"
                 />
+                {/* Rose-gold overlay */}
+                <div className="absolute inset-0 pointer-events-none"
+                  style={{ background: 'linear-gradient(135deg, rgba(228,165,165,0.2) 0%, transparent 40%, rgba(212,168,83,0.25) 100%)' }} />
               </div>
-              <div className="mt-6 flex items-baseline justify-between border-t border-ink/25 pt-4">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-champagne font-medium">
-                  Portrait
+              {/* Sparkles */}
+              <span className="absolute -top-4 -right-4 text-2xl text-champagne animate-sparkle">✦</span>
+              <span className="absolute bottom-1/4 -left-6 text-lg text-rose animate-sparkle" style={{ animationDelay: '1.2s' }}>✦</span>
+
+              <div className="mt-6 flex items-baseline justify-between border-t border-champagne/50 pt-4">
+                <span className="text-[10px] uppercase tracking-[0.4em] text-champagne-deep font-bold">
+                  ✦ Portrait
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.32em] text-stone">
+                <span className="text-[10px] uppercase tracking-[0.32em] text-champagne-deep font-medium">
                   MMXXVI
                 </span>
               </div>
@@ -29,19 +43,21 @@ export function Marion() {
 
           <div className="lg:col-span-7 lg:pt-12">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-[0.4em] text-champagne font-medium mb-8">
-                {marion.eyebrow}
+              <p className="inline-flex items-center gap-3 bg-gold-gradient-soft border border-champagne/40 px-4 py-1.5 mb-8 glow-gold">
+                <span className="text-[11px] uppercase tracking-[0.4em] text-ink font-medium">
+                  ✦ {marion.eyebrow}
+                </span>
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <h2 className="font-display font-light text-ink text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
-                {marion.headline}
+                <span className="text-gold-shimmer">{marion.headline}</span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.15}>
               <p className="mt-12 md:mt-16 font-display italic text-ink text-2xl md:text-3xl leading-[1.35] max-w-2xl">
-                „{marion.quote}"
+                <span className="text-champagne-deep font-normal not-italic">„</span>{marion.quote}<span className="text-champagne-deep font-normal not-italic">"</span>
               </p>
             </Reveal>
 
@@ -57,10 +73,16 @@ export function Marion() {
             </Reveal>
 
             <Reveal delay={0.35}>
-              <div className="mt-12 flex flex-wrap gap-x-10 gap-y-2 text-[11px] uppercase tracking-[0.28em]">
-                <span className="text-stone">Kosmetikmeisterin 2021 ★</span>
-                <span className="text-stone">15+ Zertifikate</span>
-                <span className="text-stone">Seit 2009 selbstständig</span>
+              <div className="mt-12 flex flex-wrap gap-x-4 gap-y-3 text-[11px] uppercase tracking-[0.28em]">
+                <span className="inline-flex items-center gap-2 bg-gold-gradient text-ink px-4 py-2 font-bold glow-gold">
+                  ★ Meisterin 2021
+                </span>
+                <span className="inline-flex items-center gap-2 border border-champagne text-champagne-deep px-4 py-2 font-medium">
+                  ✦ 15+ Zertifikate
+                </span>
+                <span className="inline-flex items-center gap-2 border border-champagne text-champagne-deep px-4 py-2 font-medium">
+                  ✦ Seit 2009
+                </span>
               </div>
             </Reveal>
           </div>

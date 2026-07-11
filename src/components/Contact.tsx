@@ -44,11 +44,15 @@ export function Contact() {
       <div className="mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <Reveal className="lg:col-span-6">
-            <p className="text-[11px] uppercase tracking-[0.4em] text-champagne font-medium mb-8">
-              {contact.eyebrow}
+            <p className="inline-flex items-center gap-3 bg-gold-gradient-soft border border-champagne/40 px-4 py-1.5 mb-8 glow-gold">
+              <span className="text-[11px] uppercase tracking-[0.4em] text-ink font-medium">
+                ★ {contact.eyebrow}
+              </span>
             </p>
             <h2 className="font-display font-light text-ink text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em] whitespace-pre-line">
-              {contact.headline}
+              {contact.headline.split('\n').map((line, i) => (
+                <span key={i} className={i === 1 ? 'block italic text-gold-shimmer' : 'block'}>{line}</span>
+              ))}
             </h2>
             <p className="mt-10 md:mt-12 max-w-md text-ink-soft text-base md:text-lg leading-[1.85] font-light">
               {contact.lead}
@@ -102,7 +106,7 @@ export function Contact() {
             <div className="mt-14 flex gap-6">
               <a
                 href={`tel:${brand.phone.replace(/\s/g, "")}`}
-                className="group inline-flex items-center gap-4 bg-ink text-bone px-8 py-4 text-[11px] uppercase tracking-[0.32em] font-medium hover:bg-champagne transition-colors"
+                className="group inline-flex items-center gap-4 bg-gold-gradient text-ink px-8 py-4 text-[11px] uppercase tracking-[0.32em] font-bold glow-gold hover:scale-[1.02] hover:shadow-[0_0_48px_rgba(240,216,150,0.6)] transition-all"
               >
                 Jetzt anrufen
                 <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -111,16 +115,20 @@ export function Contact() {
                 href={brand.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-ink underline underline-offset-8 decoration-champagne decoration-2 py-4"
+                className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-champagne-deep underline underline-offset-8 decoration-champagne decoration-2 py-4 font-medium hover:decoration-champagne-deep transition-colors"
               >
-                Instagram
+                Instagram ↗
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={0.15} className="lg:col-span-6">
-            <div className="aspect-[4/5] lg:aspect-square border border-ink/15">
-              <div ref={ref} className="w-full h-full" />
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gold-gradient glow-gold" />
+              <div className="relative aspect-[4/5] lg:aspect-square">
+                <div ref={ref} className="w-full h-full" />
+              </div>
+              <span className="absolute -top-4 -right-4 text-2xl text-champagne animate-sparkle">✦</span>
             </div>
           </Reveal>
         </div>

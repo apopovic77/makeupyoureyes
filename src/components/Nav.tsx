@@ -56,9 +56,9 @@ export function Nav() {
           </a>
           <a
             href="#kontakt"
-            className="hidden md:inline-flex items-center gap-2 border border-ink px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-ink hover:bg-ink hover:text-bone transition-colors"
+            className="hidden md:inline-flex items-center gap-2 bg-gold-gradient text-ink px-4 py-2 text-[11px] uppercase tracking-[0.28em] font-bold glow-gold hover:scale-[1.03] transition-all"
           >
-            Termin
+            ★ Termin
           </a>
           <button
             onClick={() => setOpen(!open)}

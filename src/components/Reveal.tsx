@@ -19,7 +19,7 @@ export function Reveal({
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.05, margin: "0px 0px -5% 0px" }}
       transition={{ delay }}
       variants={variants}
       className={className}

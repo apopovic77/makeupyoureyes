@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  /* Editorial NYC visagist palette — restrained, high-fashion */
-  --color-ink: #0a0a0a;              /* near-black — primary text + backgrounds */
-  --color-ink-soft: #2a2723;
-  --color-bone: #f5f0e6;             /* warm off-white — primary background */
-  --color-bone-deep: #ebe4d5;
-  --color-champagne: #b89968;        /* muted metallic gold — accent, restrained */
-  --color-champagne-soft: #d4b98a;
-  --color-blush: #d9bfab;            /* subtle warm rose — rare highlight */
-  --color-stone: #7a7368;            /* mid-tone body / captions */
+  /* Shiny-glam NYC visagist — Charlotte Tilbury / Pat McGrath energy */
+  --color-ink: #100610;              /* deep wine-black — samtiger als reines schwarz */
+  --color-ink-soft: #241419;
+  --color-plum: #2b0d1f;             /* dunkles pflaume-plum als Sektions-Fläche */
+  --color-plum-deep: #1a0812;
+  --color-wine: #4a1930;             /* wine berry accent */
+
+  --color-bone: #faf3e7;             /* wärmeres cream */
+  --color-bone-deep: #f2e7d1;
+  --color-champagne: #d4a853;        /* HELLERES metallisches Gold */
+  --color-champagne-soft: #f0d896;   /* light gold shimmer */
+  --color-champagne-deep: #8c6420;   /* deep gold shadow */
+
+  --color-blush: #e4a5a5;            /* rosé-blush pop */
+  --color-rose: #c7758b;             /* deeper rose accent */
+  --color-emerald: #1f5c4e;          /* jewel emerald */
+
+  --color-stone: #7a7368;
   --color-stone-soft: #a89f92;
 
   /* Fonts */
@@ -28,16 +37,70 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: var(--color-ink); color: var(--color-bone); }
+::selection { background: var(--color-champagne); color: var(--color-ink); }
 
-/* Hairline decorative divider */
-@utility hairline {
-  height: 1px;
-  background: var(--color-ink);
-  opacity: 0.15;
+/* SHIMMER GOLD gradient text — for headline accents */
+@utility text-gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    #8c6420 0%,
+    #d4a853 20%,
+    #f4e08a 40%,
+    #f0d896 55%,
+    #d4a853 75%,
+    #8c6420 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: shimmer 8s ease-in-out infinite;
 }
 
-/* Marion portrait treatment — B&W with warm tint to hide harsh eye makeup */
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+@utility bg-gold-gradient {
+  background: linear-gradient(135deg, #d4a853 0%, #f4e08a 45%, #d4a853 55%, #8c6420 100%);
+}
+@utility bg-gold-gradient-soft {
+  background: linear-gradient(135deg, #f0d896 0%, #f4e08a 50%, #d4a853 100%);
+}
+@utility border-gold-gradient {
+  border-image: linear-gradient(135deg, #d4a853, #f4e08a, #8c6420) 1;
+}
+
+/* Glow around gold elements */
+@utility glow-gold {
+  box-shadow:
+    0 0 32px rgba(212, 168, 83, 0.35),
+    0 0 8px rgba(240, 216, 150, 0.5),
+    inset 0 0 12px rgba(240, 216, 150, 0.2);
+}
+@utility text-glow-gold {
+  text-shadow:
+    0 0 20px rgba(212, 168, 83, 0.5),
+    0 0 40px rgba(240, 216, 150, 0.3);
+}
+
+/* Hairline decorative divider — now shimmer gold */
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 168, 83, 0.6) 50%, transparent 100%);
+}
+
+/* Marion portrait — warmer duotone with rose+gold tint (not stark B&W anymore) */
 @utility editorial-bw {
-  filter: grayscale(1) contrast(1.1) sepia(0.15) brightness(0.98);
+  filter: grayscale(0.55) contrast(1.1) sepia(0.35) brightness(1.02) saturate(0.9) hue-rotate(-8deg);
+}
+
+/* Sparkle keyframes for decorative bits */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+@utility animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
 }
