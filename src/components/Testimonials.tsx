@@ -3,7 +3,7 @@ import { testimonials } from "../data/content";
 
 export function Testimonials() {
   return (
-    <section className="relative bg-bone text-ink py-24 md:py-40">
+    <section className="relative bg-bone text-ink py-24 md:py-40 overflow-hidden">
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         {/* Ambient rose glow */}
         <div className="pointer-events-none absolute top-0 left-1/3 w-[600px] h-[400px] opacity-25"
