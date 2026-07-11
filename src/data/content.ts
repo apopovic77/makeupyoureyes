@@ -144,6 +144,29 @@ export const cv = [
   { year: "2026", label: "Natural Face Lifting Methoden bei Olga von Stein" },
 ];
 
+// Portfolio — editorial shoots + client references
+// Bento sizes: 'wide' (2col), 'tall' (2row), 'huge' (2x2), or 'default' (1x1)
+export const portfolio = {
+  eyebrow: "Portfolio · Editorial Work",
+  headline: "Meine Arbeit\nspricht.",
+  lead:
+    "Aus 20 Jahren am Make-up-Set — Beauty-Pageant-Finalistinnen, Editorial-Shootings mit Martin Lugger und Alois Bergmann, Kunden-Porträts. Jede Seele bekommt ihren eigenen Blick.",
+  works: [
+    { src: "/media/images/oczy-1920w.jpg", tag: "Editorial", caption: "Silber-Kette · Signature Shot", size: "huge" },
+    { src: "/media/images/140613_martinlugger_lisa_MLUG1836p-1920w.jpg", tag: "Martin Lugger", caption: "Wiese · Golden Hour", size: "tall" },
+    { src: "/media/images/_MG_2076-Edit01bw-1920w.jpg", tag: "Editorial", caption: "Karo · B&W Studio", size: "default" },
+    { src: "/media/images/140613_martinlugger_lisa_MLUG1908-1920w.jpg", tag: "Martin Lugger", caption: "Grasses · Editorial", size: "default" },
+    { src: "/media/images/_MG_2148-Edit02-1920w.jpg", tag: "Editorial", caption: "Water-Splash · Beauty", size: "wide" },
+    { src: "/media/images/_MG_2209-Edit-1920w.jpg", tag: "Editorial", caption: "Blau · Splash-Beauty", size: "default" },
+    { src: "/media/images/_MG_2283-Edit01F-1920w.jpg", tag: "Editorial", caption: "Kleid · Studio-Portrait", size: "tall" },
+    { src: "/media/images/_MG_7805-1920w.jpg", tag: "Editorial", caption: "Rotkleid · Portrait", size: "default" },
+    { src: "/media/images/_MG_7537_2-1920w.jpg", tag: "Editorial", caption: "B&W · Cover-Portrait", size: "default" },
+    { src: "/media/images/AL_02-1920w.jpg", tag: "Alois Bergmann", caption: "Dance · Bewegung", size: "wide" },
+    { src: "/media/images/julia11-1920w.jpg", tag: "Editorial", caption: "Julia · Sunset-Portrait", size: "default" },
+    { src: "/media/images/Lisa-1920w.jpg", tag: "Kunden", caption: "Lisa · Behandlung", size: "default" },
+  ],
+};
+
 export const contact = {
   eyebrow: "Kontakt",
   headline: "Ein Termin.\nEin Wandel.",

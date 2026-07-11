@@ -4,9 +4,9 @@ import { brand } from "../data/content";
 
 const links = [
   { href: "#natural-face-lifting", label: "Natural Face Lifting" },
+  { href: "#portfolio", label: "Portfolio" },
   { href: "#leistungen", label: "Leistungen" },
   { href: "#marion", label: "Marion" },
-  { href: "#referenzen", label: "Referenzen" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
