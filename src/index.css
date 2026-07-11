@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Editorial NYC visagist palette — restrained, high-fashion */
+  --color-ink: #0a0a0a;              /* near-black — primary text + backgrounds */
+  --color-ink-soft: #2a2723;
+  --color-bone: #f5f0e6;             /* warm off-white — primary background */
+  --color-bone-deep: #ebe4d5;
+  --color-champagne: #b89968;        /* muted metallic gold — accent, restrained */
+  --color-champagne-soft: #d4b98a;
+  --color-blush: #d9bfab;            /* subtle warm rose — rare highlight */
+  --color-stone: #7a7368;            /* mid-tone body / captions */
+  --color-stone-soft: #a89f92;
+
+  /* Fonts */
+  --font-display: "Bodoni Moda", "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--color-ink); color: var(--color-bone); }
+
+/* Hairline decorative divider */
+@utility hairline {
+  height: 1px;
+  background: var(--color-ink);
+  opacity: 0.15;
+}
+
+/* Marion portrait treatment — B&W with warm tint to hide harsh eye makeup */
+@utility editorial-bw {
+  filter: grayscale(1) contrast(1.1) sepia(0.15) brightness(0.98);
+}
