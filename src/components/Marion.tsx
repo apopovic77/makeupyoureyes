@@ -14,23 +14,27 @@ export function Marion() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
           {/* Portrait with gold frame + duotone rose-gold treatment */}
           <Reveal className="lg:col-span-5">
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gold-gradient glow-gold" />
-              <div className="relative aspect-[3/4] overflow-hidden">
-                <img
-                  src={marion.portrait}
-                  alt={marion.headline}
-                  className="w-full h-full object-cover editorial-bw"
-                />
-                {/* Rose-gold overlay */}
-                <div className="absolute inset-0 pointer-events-none"
-                  style={{ background: 'linear-gradient(135deg, rgba(228,165,165,0.2) 0%, transparent 40%, rgba(212,168,83,0.25) 100%)' }} />
+            <div>
+              {/* Framed image — sized by aspect ratio only */}
+              <div className="relative aspect-[3/4]">
+                <div className="absolute -inset-2 bg-gold-gradient glow-gold" />
+                <div className="relative w-full h-full overflow-hidden">
+                  <img
+                    src={marion.portrait}
+                    alt={marion.headline}
+                    className="w-full h-full object-cover editorial-bw"
+                  />
+                  {/* Rose-gold overlay */}
+                  <div className="absolute inset-0 pointer-events-none"
+                    style={{ background: 'linear-gradient(135deg, rgba(228,165,165,0.2) 0%, transparent 40%, rgba(212,168,83,0.25) 100%)' }} />
+                </div>
+                {/* Sparkles */}
+                <span className="absolute -top-4 -right-4 text-2xl text-champagne animate-sparkle">✦</span>
+                <span className="absolute bottom-1/4 -left-6 text-lg text-rose animate-sparkle" style={{ animationDelay: '1.2s' }}>✦</span>
               </div>
-              {/* Sparkles */}
-              <span className="absolute -top-4 -right-4 text-2xl text-champagne animate-sparkle">✦</span>
-              <span className="absolute bottom-1/4 -left-6 text-lg text-rose animate-sparkle" style={{ animationDelay: '1.2s' }}>✦</span>
 
-              <div className="mt-6 flex items-baseline justify-between border-t border-champagne/50 pt-4">
+              {/* Caption — outside the framed wrapper */}
+              <div className="mt-8 flex items-baseline justify-between border-t border-champagne/50 pt-4">
                 <span className="text-[10px] uppercase tracking-[0.4em] text-champagne-deep font-bold">
                   ✦ Portrait
                 </span>

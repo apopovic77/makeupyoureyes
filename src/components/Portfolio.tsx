@@ -67,7 +67,7 @@ export function Portfolio() {
             <img
               src={work.src}
               alt={work.title}
-              className="w-full h-full object-cover editorial-bw"
+              className="w-full h-full object-cover object-top editorial-bw"
               draggable={false}
             />
             {/* Warm rose-gold overlay for consistency */}
@@ -161,7 +161,7 @@ export function Portfolio() {
               }`}
               aria-label={`Slide ${wi + 1}`}
             >
-              <img src={w.src} alt="" className="w-full h-full object-cover editorial-bw" />
+              <img src={w.src} alt="" className="w-full h-full object-cover object-top editorial-bw" />
               {wi === i && (
                 <div className="absolute inset-0 pointer-events-none" style={{
                   background: "linear-gradient(135deg, rgba(212,168,83,0.25) 0%, transparent 60%)"
