@@ -20,7 +20,7 @@ export function CV() {
               <span className="block font-serif font-light italic text-5xl md:text-7xl lg:text-8xl leading-[0.94] tracking-[-0.02em]">
                 Beinahe drei
               </span>
-              <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">
+              <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.0] tracking-normal pb-2">
                 Dekaden Lernen.
               </span>
             </h2>

@@ -28,12 +28,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
-            className="text-ink overflow-visible py-4"
+            className="text-ink overflow-visible"
+            style={{ paddingTop: "0.15em", paddingBottom: "0.25em" }}
           >
-            <span className="block font-display font-normal text-ink text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] leading-[1.1] tracking-normal">
+            <span className="block font-display font-normal text-ink text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "0.95" }}>
               {hero.title}
             </span>
-            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] leading-[1.1] tracking-normal">
+            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "0.95" }}>
               {hero.titleAccent}
             </span>
           </motion.h1>

@@ -26,7 +26,7 @@ export function NFL() {
                     {line}
                   </span>
                 ) : (
-                  <span key={i} className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.25] tracking-normal pb-4">
+                  <span key={i} className="block font-display font-normal text-gold-shimmer text-glow-gold text-6xl md:text-8xl lg:text-9xl leading-[1.0] tracking-normal pb-2">
                     {line}
                   </span>
                 )
@@ -44,12 +44,12 @@ export function NFL() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {nfl.pillars.map((p, i) => (
             <Reveal key={p.no} delay={i * 0.08}>
-              <div className="group relative bg-plum p-8 md:p-12 h-full min-h-[280px] flex flex-col overflow-hidden border border-champagne/25 hover:border-champagne/60 transition-all hover:glow-gold">
+              <div className="group relative bg-plum p-8 md:p-12 h-full min-h-[280px] flex flex-col border border-champagne/25 hover:border-champagne/60 transition-all hover:glow-gold">
                 {/* Top gold hairline */}
                 <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-champagne to-transparent opacity-70" />
 
                 <div className="flex items-baseline gap-6 mb-8">
-                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic leading-none text-glow-gold">
+                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic text-glow-gold pb-2" style={{ lineHeight: "1.1" }}>
                     {p.no}
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.32em] text-champagne-soft font-light">
@@ -74,7 +74,7 @@ export function NFL() {
         <Reveal delay={0.2}>
           <blockquote className="mt-20 md:mt-32 max-w-4xl mx-auto text-center relative">
             <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-3xl text-gold-shimmer">✦ ✦ ✦</span>
-            <p className="font-script font-normal text-champagne-soft text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-glow-gold">
+            <p className="font-script font-normal text-champagne-soft text-4xl md:text-6xl lg:text-7xl leading-[1.0] text-glow-gold pb-2">
               {nfl.quote}
             </p>
             <footer className="mt-10 text-[10px] uppercase tracking-[0.4em] text-champagne-soft">

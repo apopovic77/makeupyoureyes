@@ -21,7 +21,7 @@ export function Catalogue() {
               <span className="block font-serif font-light italic text-5xl md:text-7xl lg:text-[112px] leading-[0.94] tracking-[-0.02em]">
                 Ein Studio.
               </span>
-              <span className="block font-display font-normal text-gold-shimmer text-6xl md:text-8xl lg:text-[132px] leading-[1.25] tracking-normal pb-4">
+              <span className="block font-display font-normal text-gold-shimmer text-6xl md:text-8xl lg:text-[132px] leading-[1.0] tracking-normal pb-2">
                 Vierzehn Handwerke.
               </span>
             </h2>
