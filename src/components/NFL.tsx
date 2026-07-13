@@ -49,7 +49,7 @@ export function NFL() {
                 <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-champagne to-transparent opacity-70" />
 
                 <div className="flex items-baseline gap-6 mb-8 pt-2">
-                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic text-glow-gold pt-4 pb-2" style={{ lineHeight: "1.4" }}>
+                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic text-glow-gold pt-6 pb-6" style={{ lineHeight: "1.55" }}>
                     {p.no}
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.32em] text-champagne-soft font-light">
