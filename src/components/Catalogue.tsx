@@ -3,10 +3,12 @@ import { catalogue } from "../data/content";
 
 export function Catalogue() {
   return (
-    <section id="leistungen" className="relative bg-bone text-ink py-24 md:py-40 overflow-hidden">
-      {/* Ambient gold glow */}
-      <div className="pointer-events-none absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full opacity-30"
-        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, transparent 70%)' }} />
+    <section id="leistungen" className="relative bg-bone text-ink py-24 md:py-40">
+      {/* Ambient gold — clipped container */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, transparent 70%)' }} />
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         {/* Section masthead */}

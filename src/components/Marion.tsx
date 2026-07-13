@@ -3,12 +3,14 @@ import { marion } from "../data/content";
 
 export function Marion() {
   return (
-    <section id="marion" className="relative bg-bone-deep text-ink py-24 md:py-40 overflow-hidden">
-      {/* Ambient rose+gold */}
-      <div className="pointer-events-none absolute top-40 -left-32 w-[500px] h-[500px] rounded-full opacity-30"
-        style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.6) 0%, transparent 70%)' }} />
-      <div className="pointer-events-none absolute bottom-20 -right-40 w-[600px] h-[600px] rounded-full opacity-30"
-        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, transparent 70%)' }} />
+    <section id="marion" className="relative bg-bone-deep text-ink py-24 md:py-40">
+      {/* Ambient rose+gold — clipped container */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-40 -left-32 w-[500px] h-[500px] rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.6) 0%, transparent 70%)' }} />
+        <div className="absolute bottom-20 -right-40 w-[600px] h-[600px] rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, transparent 70%)' }} />
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">

@@ -23,7 +23,7 @@ export function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative bg-plum-deep text-bone overflow-hidden"
+      className="relative bg-plum-deep text-bone"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

@@ -3,10 +3,12 @@ import { cv } from "../data/content";
 
 export function CV() {
   return (
-    <section id="referenzen" className="relative bg-plum-deep text-bone py-24 md:py-40 overflow-hidden">
-      {/* Gold glow accents */}
-      <div className="pointer-events-none absolute top-0 left-1/2 w-[800px] h-[400px] -translate-x-1/2 opacity-20"
-        style={{ background: 'radial-gradient(ellipse at center top, rgba(240,216,150,0.7) 0%, transparent 70%)' }} />
+    <section id="referenzen" className="relative bg-plum-deep text-bone py-24 md:py-40">
+      {/* Gold glow — clipped container */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/2 w-[800px] h-[400px] -translate-x-1/2 opacity-20"
+          style={{ background: 'radial-gradient(ellipse at center top, rgba(240,216,150,0.7) 0%, transparent 70%)' }} />
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 md:mb-24 items-end">

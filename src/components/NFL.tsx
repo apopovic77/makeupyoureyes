@@ -3,12 +3,14 @@ import { nfl } from "../data/content";
 
 export function NFL() {
   return (
-    <section id="natural-face-lifting" className="relative bg-plum-deep text-bone py-24 md:py-40 overflow-hidden">
-      {/* Ambient gold + rose glows */}
-      <div className="pointer-events-none absolute top-20 -left-40 w-[700px] h-[700px] rounded-full opacity-25"
-        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.6) 0%, rgba(212,168,83,0.25) 40%, transparent 70%)' }} />
-      <div className="pointer-events-none absolute bottom-40 -right-40 w-[600px] h-[600px] rounded-full opacity-20"
-        style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.6) 0%, rgba(199,117,139,0.2) 40%, transparent 70%)' }} />
+    <section id="natural-face-lifting" className="relative bg-plum-deep text-bone py-24 md:py-40">
+      {/* Ambient gold + rose glows — clipped to section only, no impact on cursive text */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 -left-40 w-[700px] h-[700px] rounded-full opacity-25"
+          style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.6) 0%, rgba(212,168,83,0.25) 40%, transparent 70%)' }} />
+        <div className="absolute bottom-40 -right-40 w-[600px] h-[600px] rounded-full opacity-20"
+          style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.6) 0%, rgba(199,117,139,0.2) 40%, transparent 70%)' }} />
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
         {/* Section masthead */}
@@ -48,8 +50,8 @@ export function NFL() {
                 {/* Top gold hairline */}
                 <div className="absolute top-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-champagne to-transparent opacity-70" />
 
-                <div className="flex items-baseline gap-6 mb-8 pt-2">
-                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic text-glow-gold pt-6 pb-6" style={{ lineHeight: "1.55" }}>
+                <div className="flex items-baseline gap-6 mb-8">
+                  <span className="font-display font-normal text-gold-shimmer text-6xl md:text-8xl italic text-glow-gold" style={{ lineHeight: "1.0" }}>
                     {p.no}
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.32em] text-champagne-soft font-light">

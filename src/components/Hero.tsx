@@ -3,12 +3,14 @@ import { hero, marion } from "../data/content";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen bg-bone text-ink pt-32 md:pt-40 pb-24 overflow-hidden">
-      {/* Radial gold glow behind hero — subtle luminescence */}
-      <div className="pointer-events-none absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-40"
-        style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, rgba(212,168,83,0.2) 40%, transparent 70%)' }} />
-      <div className="pointer-events-none absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full opacity-30"
-        style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.5) 0%, rgba(199,117,139,0.2) 40%, transparent 70%)' }} />
+    <section className="relative min-h-screen bg-bone text-ink pt-32 md:pt-40 pb-24">
+      {/* Radial gold glow — dedicated clip container */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full opacity-40"
+          style={{ background: 'radial-gradient(circle, rgba(240,216,150,0.5) 0%, rgba(212,168,83,0.2) 40%, transparent 70%)' }} />
+        <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full opacity-30"
+          style={{ background: 'radial-gradient(circle, rgba(228,165,165,0.5) 0%, rgba(199,117,139,0.2) 40%, transparent 70%)' }} />
+      </div>
 
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
         {/* LEFT — massive editorial type */}
@@ -28,13 +30,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
-            className="text-ink overflow-visible"
-            style={{ paddingTop: "0.15em", paddingBottom: "0.25em" }}
+            className="text-ink"
           >
-            <span className="block font-display font-normal text-ink text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "1.15" }}>
+            <span className="block font-display font-normal text-ink text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal" style={{ lineHeight: "1.0" }}>
               {hero.title}
             </span>
-            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "1.15" }}>
+            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal" style={{ lineHeight: "1.0" }}>
               {hero.titleAccent}
             </span>
           </motion.h1>

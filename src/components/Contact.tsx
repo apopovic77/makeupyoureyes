@@ -40,7 +40,7 @@ export function Contact() {
   }, []);
 
   return (
-    <section id="kontakt" className="relative bg-bone text-ink py-24 md:py-40 overflow-hidden">
+    <section id="kontakt" className="relative bg-bone text-ink py-24 md:py-40">
       <div className="mx-auto max-w-[1440px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <Reveal className="lg:col-span-6">

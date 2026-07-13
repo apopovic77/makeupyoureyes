@@ -3,11 +3,13 @@ import { testimonials } from "../data/content";
 
 export function Testimonials() {
   return (
-    <section className="relative bg-bone text-ink py-24 md:py-40 overflow-hidden">
-      <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
-        {/* Ambient rose glow */}
-        <div className="pointer-events-none absolute top-0 left-1/3 w-[600px] h-[400px] opacity-25"
+    <section className="relative bg-bone text-ink py-24 md:py-40">
+      {/* Ambient rose glow — clipped container */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/3 w-[600px] h-[400px] opacity-25"
           style={{ background: 'radial-gradient(ellipse, rgba(228,165,165,0.6) 0%, transparent 70%)' }} />
+      </div>
+      <div className="relative mx-auto max-w-[1440px] px-6 md:px-10">
 
         <Reveal>
           <p className="relative inline-flex items-center gap-3 bg-gold-gradient-soft border border-champagne/40 px-4 py-1.5 mb-12 md:mb-16 glow-gold">
