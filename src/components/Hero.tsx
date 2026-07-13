@@ -36,16 +36,14 @@ export function Hero() {
               {hero.title}
             </span>
             {/*
-              CSS mask fades the top of the Gold line to transparent — the S-swash rising
-              into the "Straffung" line-box gradually disappears instead of colliding.
-              No layout change: same sizes, same leading, same margins.
+              mix-blend-mode multiply: where Gold-Swash overlaps Black-Straffung,
+              colors multiply → dark bronze. Looks intentional, no cutoff, no layout change.
             */}
             <span
               className="block font-display font-normal text-gold-shimmer text-glow-gold text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal"
               style={{
                 lineHeight: "1.0",
-                WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, transparent 8%, black 22%, black 100%)",
-                maskImage: "linear-gradient(to bottom, transparent 0%, transparent 8%, black 22%, black 100%)",
+                mixBlendMode: "multiply",
               }}
             >
               {hero.titleAccent}
