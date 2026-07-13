@@ -31,10 +31,10 @@ export function Hero() {
             className="text-ink overflow-visible"
             style={{ paddingTop: "0.15em", paddingBottom: "0.25em" }}
           >
-            <span className="block font-display font-normal text-ink text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "0.95" }}>
+            <span className="block font-display font-normal text-ink text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "1.15" }}>
               {hero.title}
             </span>
-            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "0.95" }}>
+            <span className="block font-display font-normal text-gold-shimmer text-glow-gold text-[56px] sm:text-[76px] md:text-[104px] lg:text-[132px] tracking-normal" style={{ lineHeight: "1.15" }}>
               {hero.titleAccent}
             </span>
           </motion.h1>
