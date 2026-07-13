@@ -30,17 +30,24 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
-            className="text-ink relative isolate"
+            className="text-ink"
           >
-            {/*
-              Line 1 sits ABOVE line 2 in z-order and paints its own line-box in bone bg.
-              Where line 2's S-swash reaches upward into line 1's row, the bone bg covers it.
-              No layout change: same font-sizes, same leading, same margins.
-            */}
-            <span className="relative block font-display font-normal text-ink text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal z-20 bg-bone" style={{ lineHeight: "1.0" }}>
+            <span className="block font-display font-normal text-ink text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal" style={{ lineHeight: "1.0" }}>
               {hero.title}
             </span>
-            <span className="relative block font-display font-normal text-gold-shimmer text-glow-gold text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal z-10" style={{ lineHeight: "1.0" }}>
+            {/*
+              CSS mask fades the top of the Gold line to transparent — the S-swash rising
+              into the "Straffung" line-box gradually disappears instead of colliding.
+              No layout change: same sizes, same leading, same margins.
+            */}
+            <span
+              className="block font-display font-normal text-gold-shimmer text-glow-gold text-[64px] sm:text-[88px] md:text-[120px] lg:text-[152px] tracking-normal"
+              style={{
+                lineHeight: "1.0",
+                WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, transparent 8%, black 22%, black 100%)",
+                maskImage: "linear-gradient(to bottom, transparent 0%, transparent 8%, black 22%, black 100%)",
+              }}
+            >
               {hero.titleAccent}
             </span>
           </motion.h1>
