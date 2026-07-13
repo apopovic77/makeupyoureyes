@@ -95,11 +95,9 @@ export function Hero() {
               <img
                 src={marion.editorial}
                 alt="Editorial portrait"
-                className="w-full h-full object-cover editorial-bw"
+                className="w-full h-full object-cover"
               />
-              {/* Warm rose-gold overlay tint */}
-              <div className="absolute inset-0 pointer-events-none"
-                style={{ background: 'linear-gradient(135deg, rgba(228,165,165,0.15) 0%, transparent 40%, rgba(212,168,83,0.2) 100%)' }} />
+              {/* Overlay removed — colors of the makeup work stay authentic */}
             </div>
             {/* Signature detail — floating gold label */}
             <div className="absolute -bottom-6 -right-6 bg-ink text-champagne-soft px-5 py-3 border border-champagne glow-gold">

@@ -69,14 +69,10 @@ export function Portfolio() {
             <img
               src={work.src}
               alt={work.title}
-              className="w-full h-full object-cover object-top editorial-bw"
+              className="w-full h-full object-cover object-top"
               draggable={false}
             />
-            {/* Warm rose-gold overlay for consistency */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: "linear-gradient(135deg, rgba(228,165,165,0.14) 0%, transparent 45%, rgba(212,168,83,0.2) 100%)" }}
-            />
+            {/* Overlay removed — colors of the makeup work stay authentic */}
             {/* Dark vignette bottom + left for legibility */}
             <div className="absolute inset-0 pointer-events-none" style={{
               background: "linear-gradient(180deg, rgba(16,6,16,0.35) 0%, transparent 25%, transparent 45%, rgba(16,6,16,0.7) 100%)",
@@ -163,7 +159,7 @@ export function Portfolio() {
               }`}
               aria-label={`Slide ${wi + 1}`}
             >
-              <img src={w.src} alt="" className="w-full h-full object-cover object-top editorial-bw" />
+              <img src={w.src} alt="" className="w-full h-full object-cover object-top" />
               {wi === i && (
                 <div className="absolute inset-0 pointer-events-none" style={{
                   background: "linear-gradient(135deg, rgba(212,168,83,0.25) 0%, transparent 60%)"
